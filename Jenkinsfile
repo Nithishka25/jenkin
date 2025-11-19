@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools { maven 'Maven-3' jdk 'OpenJDK-11' }
+  tools { maven 'Maven-3' jdk 'OpenJDK-21' }
   options { timestamps(); buildDiscarder(logRotator(numToKeepStr:'10')) }
   stages {
     stage('Checkout') { steps { checkout scm } }
